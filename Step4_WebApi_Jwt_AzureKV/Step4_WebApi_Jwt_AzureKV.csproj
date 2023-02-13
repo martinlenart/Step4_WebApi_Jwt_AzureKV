@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Step3_WebApi_Jwt_AzureKV</AssemblyName>
+    <UserSecretsId>3d2b8454-7957-4457-9167-d64aaaedb8d3</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Step3_WebApi_Jwt_AzureKV' " />
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.26.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="3.1.24" />
+    <PackageReference Include="Azure.Identity" Version="1.8.2" />
+    <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Logger\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Models\" />
+    <None Remove="Services\" />
+    <None Remove="Microsoft.Owin" />
+    <None Remove="Microsoft.Owin.Security.OAuth" />
+    <None Remove="Microsoft.Owin.Cors" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="Microsoft.IdentityModel.JsonWebTokens" />
+    <None Remove="System.IdentityModel.Tokens.Jwt" />
+    <None Remove="Microsoft.Extensions.Configuration.AzureKeyVault" />
+    <None Remove="Azure.Identity" />
+    <None Remove="Azure.Security.KeyVault.Secrets" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logger\" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+</Project>
