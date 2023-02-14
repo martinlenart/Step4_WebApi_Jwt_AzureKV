@@ -103,8 +103,9 @@ namespace Step3_WebApi_Jwt_AzureKV
         public static string CurrentDbConnection => ConfigurationRoot.GetValue<string>("CurrentDbConnection");
         public static string CurrentDbConnectionString => ConfigurationRoot.GetConnectionString(CurrentDbConnection);
 
+        //public static string CurrentDbConnectionString => ConfigurationRoot.GetValue<string>($"ConnectionStrings:{CurrentDbConnection}");
+
         public static string SecretMessage => ConfigurationRoot.GetValue<string>("SecretMessage");
-        public static string SecretMessageAzureKV => ConfigurationRoot.GetValue<string>("SecretMessageAzureKeyVault");
 
         public static List<User> Users
         {
