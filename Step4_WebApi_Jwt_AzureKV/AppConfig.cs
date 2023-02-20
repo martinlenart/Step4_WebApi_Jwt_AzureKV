@@ -68,6 +68,7 @@ namespace Step3_WebApi_Jwt_AzureKV
                                 .AddInMemoryCollection(userSecretsAKV);
             
             _configuration = builder.Build();
+            _configuration.Bind
         }
 
         private static IConfigurationRoot ConfigurationRoot
@@ -99,13 +100,13 @@ namespace Step3_WebApi_Jwt_AzureKV
         }
 
 
-        public static string CurrentDbType => ConfigurationRoot.GetValue<string>("CurrentDbType");
-        public static string CurrentDbConnection => ConfigurationRoot.GetValue<string>("CurrentDbConnection");
+        public static string CurrentDbType => ConfigurationRoot["CurrentDbType"];
+        public static string CurrentDbConnection => ConfigurationRoot["CurrentDbConnection"];
         public static string CurrentDbConnectionString => ConfigurationRoot.GetConnectionString(CurrentDbConnection);
 
         //public static string CurrentDbConnectionString => ConfigurationRoot.GetValue<string>($"ConnectionStrings:{CurrentDbConnection}");
 
-        public static string SecretMessage => ConfigurationRoot.GetValue<string>("SecretMessage");
+        public static string SecretMessage => ConfigurationRoot["SecretMessage"];
 
         public static List<User> Users
         {
