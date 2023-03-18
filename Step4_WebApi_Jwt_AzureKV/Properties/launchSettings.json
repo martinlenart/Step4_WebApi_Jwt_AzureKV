@@ -17,18 +17,10 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Step3_WebApi_Jwt_AzureKV": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "applicationUrl": "http://localhost:64388",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
     "Step4_WebApi_Jwt_AzureKV": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:30239",
+      "applicationUrl": "https://localhost:41532;http://localhost:48454",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

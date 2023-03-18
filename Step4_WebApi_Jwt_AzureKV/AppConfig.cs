@@ -51,7 +51,7 @@ namespace Step3_WebApi_Jwt_AzureKV
                 new DefaultAzureCredentialOptions { AdditionallyAllowedTenants = { "*" } }));
 
             //Get user-secrets from AKV and flatten it into a Dictionary<string, string>
-            var secret = client.GetSecret("user-secrets");
+            var secret = client.GetSecret("user-secrets1");
             var message = secret.Value.Value;
             var userSecretsAKV = JsonFlatToDictionary(message);
 
@@ -68,7 +68,6 @@ namespace Step3_WebApi_Jwt_AzureKV
                                 .AddInMemoryCollection(userSecretsAKV);
             
             _configuration = builder.Build();
-            _configuration.Bind
         }
 
         private static IConfigurationRoot ConfigurationRoot
